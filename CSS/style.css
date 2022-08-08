@@ -1,51 +1,48 @@
-
-/* body{
-    background: url(./assets/order-1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 20vh;
-
-    overflow: hidden;
-    background-attachment: fixed;
-
-
-} */
-.body-container{
-    margin-top: -9px;
-    margin-left: -10px;
-    width:98.8vw ;
-    height: 60%;
-    overflow: hidden;
-    background-color: rgb(51, 50, 50);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #2B2922
 }
-.navbar{
+.container{
+    width: 100%;
+    height: 90vh;
+}
+.navbar {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-between;
+    height: 14vh;
     align-items: center;
+    margin-left: 50px;
+    max-width: 100%;
 }
-.list{
-    display: flex;
-    flex-direction: row;
+.navbar div img {
+    width: 170px;
+}
+.navbar .list {
     list-style-type: none;
+    display: flex;
+    gap: 40px;
+    font-weight: 200;
     color: rgb(255, 238, 0);
-    font-weight: 700;
-    font-size: 20px;
-    justify-content: space-between;
+    font-size: 15px;
     align-items: center;
-}
-.list-item{
-margin-left: -30%;
-align-items: center;
-cursor: pointer;
-font-family: 'Red Rose';
+    margin-left: 120px;
 
 }
+.navbar .list .list-item {
+    font-size: 22px;
+    font-family: 'Red Rose';
+    cursor: pointer;
 
-.logo{
-margin-left: 80px;
-z-index: 2;
+}
+.navbar .list button {
+    background-color: transparent;
+    border: 1px solid #a08f36;
+    color: #a08f36;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 .order{
     display: block;
@@ -60,49 +57,194 @@ z-index: 2;
     font-family: 'Red Rose';
     font-size: 22px;
     margin-top: 15px;
-    margin-right: 120px;
-    margin-bottom: 20px;
     cursor: pointer;
+    margin-right: 30px;
+}
+.hero-section{
+    height: 50vh;
 }
 .hero{
     display: flex;
-    flex-direction: column;
-    flex: 0.5;
+    justify-content: center;
+    align-items: center;
+    gap: 13rem;
 
 }
  .hero-heading{
     font-size: 60px;
-    display: block;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
     color: #fff;
-    margin-top: 20px;
-    margin-left:40px;
+    margin-top: 30px;
     width: 550px;
-    padding: 30px;
     font-family: 'arial';
     font-weight: 800;
     letter-spacing: 2px;
 }
-p{
-    display: flex;
-    flex-direction: row;
+.description{
+    max-width: 23rem;
 }
-.details{
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 410px;
+.description p{
+    font-size: 20px;
     color: rgb(227, 227, 227);
     font-family: 'arial';
-    margin-top: -17%;
-    margin-left: 60%;
-    line-height: 25px;
-    font-size: 20px;
+    margin-top: 20px;
 }
-.order-1{
-    width: 100vw;
+.img-scetion{
+    max-width: 100%;
+    height: 280px;
     overflow: hidden;
+}
+.img-scetion img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*******Media Queries**********/
+@media screen and (max-width:720px){
+    nav{
+        max-width: 100%;
+        overflow-x: scroll !important;
+    }
+    section .navbar .list{
+        margin-left: 20px;
+        gap: 20px;
+    }
+    section .navbar .list .list-item{
+        font-size: 18px;
+        margin-left:15px;
+    }
+    .navbar div img{
+        width: 95px;
+    }
+    .order{
+        padding: 9px 20px;
+        font-size: 16px;
+        margin-top: 0px;
+        cursor: pointer;
+        margin-left: 5px;
+        width: 140px;
+    }
+    .hero{
+        flex-direction: row;
+        left: 0;
+        margin: 80px 40px 0px 0px;
+    }
+     .heading h1{
+        font-size: 34px;
+        margin: 30px 0px 0px 28%;
+        width: 300px;
+    }
+    .description p{
+        font-size: 20px;
+        margin: 0px 0px 0px 0px;
+        width: 220px;
+    }
+    .img-scetion{
+        max-width: 100%;
+        height: 250px;
+    }
+    .img-scetion img{
+        width: 100%;
+        height: 100%;
+    }
+}
+/*******Media Queries**********/
+@media screen and (max-width:420px){
+    nav{
+        max-width: 100%;
+        overflow-x: scroll !important;
+        margin-right: 20px;
+    }
+    section .navbar .list{
+        margin-left: 20px;
+        gap: 20px;
+    }
+    section .navbar .list .list-item{
+        font-size: 16px;
+        margin-left:10px;
+    }
+    .navbar div img{
+        width: 90px;
+    }
+    .order{
+        padding: 4px 9px;
+        font-size: 14px;
+        margin-top: 0px;
+        cursor: pointer;
+        margin-left: 5px;
+        width: 120px;
+    }
+    .hero{
+        flex-direction: column;
+    }
+     .heading h1{
+        font-size: 26px;
+        margin-left: 40px;
+        color: #fff;
+        margin-top: 30px;
+    }
+    .description p{
+        font-size: 20px;
+        width: 340px;
+        margin: -90px 0px 0px 40px;
+    }
+    .img-scetion{
+        max-width: 100%;
+        height: 220px;
+
+    }
+    .img-scetion img{
+        width: 100%;
+        height: 100%;
+    }
+}
+/********Land Scape mode**********/
+@media screen and (max-width:934px) and (orientation: landscape){
+    nav{
+        max-width: 100%;
+        overflow-x: scroll !important;
+        margin-top: 20px;
+    }
+    section .navbar .list{
+        margin-left: 20px;
+        gap: 20px;
+    }
+    section .navbar .list .list-item{
+        font-size: 18px;
+        margin-left:10px;
+    }
+    .navbar div img{
+        width: 90px;
+    }
+    .order{
+        padding: 4px 9px;
+        font-size: 14px;
+        margin-top: 0px;
+        cursor: pointer;
+        margin-left: 5px;
+        width: 120px;
+    }
+    .hero{
+        flex-direction: row;
+    }
+     .heading h1{
+        font-size: 28px;
+        max-width: 300px;
+        flex-wrap: wrap;
+        margin-top: 90px;
+        color: #fff;
+        margin-left: 50px;
+    }
+    .description p{
+        font-size: 20px;
+        margin: 90px 0px 0px 0px;
+    }
+    .img-scetion{
+        max-width: 100%;
+        height: 237px;
+    }
+    .img-scetion img{
+        width: 100%;
+        height: 100%;
+    }
 }
